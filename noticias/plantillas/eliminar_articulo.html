@@ -1,0 +1,13 @@
+<!-- ./plantillas/eliminar_articulo.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>Eliminar</h1>
+    <form action="" method="post">{% csrf_token %}
+        <p>¿Estás seguro que deseas eliminar el artículo: "{{object.titulo}}"? 
+            <span style="color: red;">Esta acción no se puede deshacer.</span> 
+        </p>
+        <button class="btn btn-danger ml-2" type="submit">Confirmar</button>
+    </form>
+{% endblock content %}

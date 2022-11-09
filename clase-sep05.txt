@@ -1,0 +1,16 @@
+*en raíz del proyecto paginas
+npm install -g heroku
+heroku login 
+*presionar cualquier tecla, ir al navegador e iniciar sesion
+*instalar el heroku cli, ir al link de telegram
+*entrar al entono virtual
+pipenv shell
+pipenv install gunciorn==19.9.0
+touch Procfile
+echo "web: gunicorn config.wsgi --log-file -" > Procfile
+git init
+git add -A
+git commit -m ""
+heroku create
+heroku config:set DISABLE_COLLECTSTATIC=1
+git push heroku master

@@ -1,0 +1,13 @@
+#creando los modelos personalizados a la app
+python manage.py makemigrations cuentas
+#hace la preparación para incorporar los modelos nuevos a la base de datos 
+
+#para ahora sí crear las bases de datos con las tablas
+python manage.py migrate
+
+python manage.py createsuperuser
+
+#entrar a /admin/
+#iniciamos sesión
+#cliqueamos Users
+#

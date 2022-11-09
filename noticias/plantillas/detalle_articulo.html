@@ -1,0 +1,20 @@
+<!-- ./plantillas/detalle_articulo.html -->
+{% extends 'base.html' %}
+
+
+{% block title %} - Detalle artículo{% endblock title %}
+
+{% block content %}
+    <div class="entrada_articulo">
+        <h2>{{object.titulo}}</h2>
+        <p>escrito por {{ object.autor }} el {{ object.fecha | date:"d F Y" }}</p>
+        <p>{{ object.cuerpo }}</p>
+    </div>
+
+    <p>
+        <a class="btn btn-info" href="{% url 'editar_articulo' articulo.pk %}">Editar</a> |
+        <a class="btn btn-danger" href="{% url 'eliminar_articulo' object.pk %}">Eliminar</a>
+    </p>
+    <p>Volver a <a href="{% url 'lista_articulos' %}">Todos los Artículos</a></p>
+{% endblock content %}
+    

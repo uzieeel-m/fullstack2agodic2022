@@ -1,0 +1,17 @@
+<!-- ./plantillas/nuevo_articulo.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}- Nuevo artículo {% endblock title %}
+
+{% block content %}
+    <div>
+        <h1>Nuevo artículo</h1>
+        <form class="" method="post">
+            {% csrf_token %}
+            {{form | crispy}}
+            <button class="btn btn-success ml-2" type="submit">Guardar</button>
+        </form>
+    </div>
+{% endblock content %}
+    

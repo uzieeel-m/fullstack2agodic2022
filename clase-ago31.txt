@@ -1,0 +1,30 @@
+mkdir paginas
+pipenv install django~=3.1.0
+pipenv shell
+(paginas) django-admin startproject config .
+python manage.py startapp paginas
+nano config/settings.py
+	agregar:
+	INSTALLED_APPS = [
+	...,
+	'paginas',
+	]
+python manage.py runserver
+ctrl+c
+mkdir paginas/plantillas
+touch plantillas/inicio.html
+en config/settings.py poner:
+TEMPLATES = [
+	'BACKEND': '...',
+	'DIRS': [str(BASE_DIR.joinpath('plantillas'))],
+	'APP_DIRS': ...
+]
+*abrir plantillas/inicio.html en vscode
+<!--plantillas/inicio.html -->
+<h1>Página de inicio</h1>
+
+*abrir paginas/views.py
+from django.views.generic import TemplateView
+class VistaPaginaInicio(TemplateView) : 
+	template_name = 'inicio.html'
+	

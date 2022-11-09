@@ -1,0 +1,19 @@
+<!-- ./plantillas/inicio.hml -->
+{% extends 'base.html' %}
+
+
+{% block titile %} - Inicio {% endblock titile %}
+
+
+{% block content %}
+    <br/>
+    <div class="jumbotron">
+        <h1 class="display-4">NoticiasApp</h1>
+        <p class="lead">Un sitio web de periódico hecho en México con Django</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'lista_articulos' %}" role="button">Ver todos los artículos</a>
+        </p>
+    </div>
+{% endblock content %}
+    
+    

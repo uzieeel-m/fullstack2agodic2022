@@ -1,0 +1,10 @@
+API key:
+5b4e7a1bcd6c451f47a741a5e83fa544-d117dd33-b4c24e21
+API base URL:https://api.mailgun.net/v3/sandbox114ac6cbf8944fa99ba215f35a990ada.mailgun.org
+
+Grab your SMTP credentials:
+SMTP hostname: smtp.mailgun.org
+Port: 587 (recommended)
+Username: postmaster@sandbox114ac6cbf8944fa99ba215f35a990ada.mailgun.org
+Default password:
+cec4654033c5c0250787bdd4a977a262-d117dd33-8bf8820d

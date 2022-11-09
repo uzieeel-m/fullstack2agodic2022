@@ -1,0 +1,8 @@
+How to create a django project
+1. create project folder
+2. $ pipenv install django~=3.1.0
+3. $ pipenv shell
+4. (django)
+5. $ django-admin startproject test_project . 
+6. $ python manage.py runserver
+7. http://127.0.0.1:8000/

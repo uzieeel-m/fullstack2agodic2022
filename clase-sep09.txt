@@ -1,0 +1,20 @@
+//para subir la app a producción
+1. instalar gunicorn dentro del entorno virual
+pipenv shell
+pipenv install gunicorn=19.9.0
+2. crear un archivo llamado Procfile en la carpeta raíz
+touch Procfile
+3. Copiar esta linea en Procfile
+web: gunicorn config.wsgi --log-file -
+4.abrir app/config/settings.py y actualizar los ALLOWED_HOSTS
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
+//subirlo a heroku
+5. Hacer un push a git
+6. Iniciar sesión a heroku
+heroku login
+heroku create
+heroku config:set DISABLE_COLLECTSTATIC=1
+git push heroku master
+//establecer la escala de utilización
+heroku ps:scale web=1
+heroku open

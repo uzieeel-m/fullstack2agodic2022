@@ -1,0 +1,15 @@
+//para pasar la aplicación a producción
+pipenv install gunicorn==19.9.0
+touch Procfile
+echo "web: gunicorn config.wsgi --log-file -" > Procfile
+
+//abrimos settings
+en ALLOWED_HOSTS
+agregamos '.herokuapp.com', 'localhost', '127.0.0.1'
+
+//subir a heroku
+heroku login
+heroku create blog18131260
+git push heroku master
+heroku ps:scale web=1
+heroku open 

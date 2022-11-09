@@ -1,0 +1,19 @@
+#cosas de docker
+docker run hola-mundo
+docker info
+
+#creación de entorno virtual
+python -m venv .venv
+#activacion del entorno
+source .venv/bin/activate
+
+#instalar python
+python -m pip install django~=4.0.0
+
+#para actualizar el pip
+python -m pip install --upgrade pip
+
+#creación de nuevo proyecto
+django-admin startproject django_project .
+python manage.py migrate
+python manage.py runserver

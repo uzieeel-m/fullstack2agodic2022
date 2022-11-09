@@ -1,0 +1,40 @@
+#crear archivo de requerimientos
+pip freeze > requirements.txt
+
+#iniciarlizar Docker
+1. salir del entorno virtual
+(.venv)(base) deactivate
+
+2. crear archivo de docker
+(base) touch Dockerfile
+3. Agregar código
+
+4. crear archivo .dockerignore (en raíz)
+5. agregar:
+.venv
+.git
+.gitignore
+
+6. correr con:
+docker build .
+
+7. crear nuevo archivo en raíz del proyecto
+docker-compose.yml
+8. agregar:
+version: '3.9'
+services:
+ web: 
+  build: .
+  ports:
+   - '8000:8000'
+  command: python manage.py runserver 0.0.0.0:8000
+  volumes:
+   - .:/code
+   
+9. correr el comando:
+docker-compose up
+#debe de salir que el servidor está corriendo
+10. bajar el servicio
+ctrl + C
+11. salir de docker
+docker-compose down

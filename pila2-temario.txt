@@ -1,0 +1,11 @@
+TEMARIO
+I. Configuración inicial (5hr, 1 semana)
+II. Formularios y autencticación
+	1. Plantillas
+III. Contenedores y bases de datos
+IV. Aplicaciones profesionales
+V. Cómputo en la nube con AWS
+VI. Proyecto integrador
+
+Pila: DJANGO 3
+
